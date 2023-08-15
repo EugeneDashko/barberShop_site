@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+
+    &__container {
+        padding-top: 16px;
+        padding-bottom: 17px;
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                color: yellow;
+            }
+    }
+
+    &__logo {
+    }
+
+    &__navigation {
+    }
+
+    &__link {
+    }
+}
+.container {
+}
+.navigation {
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
+.main-link {
+}

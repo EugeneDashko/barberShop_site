@@ -38,3 +38,8 @@ f1 + forma document
  ```shell
  https://squoosh.app/
  ```
+
+  ### шрифты
+ ```shell
+https://gwfh.mranftl.com/fonts
+ ```
