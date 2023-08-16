@@ -14,18 +14,12 @@ $text: #F6F3E3;
         @content;
     }
 }
-
-@mixin smd {
+@mixin sm {
     @media (max-width: 540px) {
         @content;
     }
 }
 
-@mixin sm {
-    @media (max-width: 320px) {
-        @content;
-    }
-}
 
 // от мобилки
 // @mixin sm {

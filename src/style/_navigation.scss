@@ -1,0 +1,19 @@
+.navigation {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: #F6F3E3;
+        font-size: 14px;
+        line-height: 1;
+        text-transform: uppercase;
+
+    }
+}

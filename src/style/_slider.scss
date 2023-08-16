@@ -1,0 +1,35 @@
+.slider {
+    overflow: hidden;
+    position: relative;
+
+    &__container {
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 -16px;
+    }
+
+    &__item {
+        padding: 0 16px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 25%;
+        
+            &_active {
+                max-width: 50%;
+            }
+    }
+
+    &__img {
+    }
+
+    &__arrow {
+
+        &_left {
+        }
+
+        &_right {
+        }
+    }
+}
