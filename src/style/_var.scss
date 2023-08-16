@@ -2,30 +2,55 @@ $back: #241D1C;
 $text: #F6F3E3;
 
 
-//
-@mixin sm {
-    @media (min-width: 576px) {
+
+// от десктопа
+@mixin lg {
+    @media (max-width: 1024px) {
         @content;
     }
 }
 @mixin md {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
-@mixin lg {
-    @media (min-width: 1024px) {
+
+@mixin smd {
+    @media (max-width: 540px) {
         @content;
     }
 }
-@mixin xl {
-    @media (min-width: 1240px) {
+
+@mixin sm {
+    @media (max-width: 320px) {
         @content;
     }
 }
-@mixin xxl {
-    @media (min-width: 1600px) {
-        @content;
-    }
-}
+
+// от мобилки
+// @mixin sm {
+//     @media (min-width: 576px) {
+//         @content;
+//     }
+// }
+// @mixin md {
+//     @media (min-width: 768px) {
+//         @content;
+//     }
+// }
+// @mixin lg {
+//     @media (min-width: 1024px) {
+//         @content;
+//     }
+// }
+// @mixin xl {
+//     @media (min-width: 1240px) {
+//         @content;
+//     }
+// }
+// @mixin xxl {
+//     @media (min-width: 1600px) {
+//         @content;
+//     }
+// }
 
