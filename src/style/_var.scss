@@ -15,7 +15,7 @@ $text: #F6F3E3;
     }
 }
 @mixin sm {
-    @media (max-width: 540px) {
+    @media (max-width: 560px) {
         @content;
     }
 }

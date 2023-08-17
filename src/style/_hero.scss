@@ -1,14 +1,6 @@
 .hero {
     padding: 62px 0;
 
-    &__title {
-        max-width: 904px;
-        color: #F6F3E3;
-        font-size: 54px;
-        line-height: 1.2;
-        text-transform: uppercase;
-        margin-bottom: 36px;
-
         @include md {
             font-size: 40px;
             margin-bottom: 24px;
@@ -16,8 +8,17 @@
             @include sm {
                 font-size: 24px;
                 margin-bottom: 12px;
+                max-width: 420px;
             }
         }
+
+    &__title {
+        max-width: 904px;
+        color: #F6F3E3;
+        font-size: 54px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 36px;
     }
 
     &__text {
