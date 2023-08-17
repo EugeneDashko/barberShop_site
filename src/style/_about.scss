@@ -1,0 +1,53 @@
+.about {
+    padding: 62px 0;
+
+    &__title {
+        font-size: 40px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        color:  #BFBDB2;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 700px;
+        margin-bottom: 72px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 384px);
+        gap: 24px 32px;
+    }
+
+    &__item {
+        padding: 6px 6px 6px 96px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__item_icon1 {
+        background-image: url('/src/img/icon1.svg');
+    }
+    &__item_icon2 {
+        background-image: url('/src/img/icon2.svg');
+    }
+    &__item_icon3 {
+        background-image: url('/src/img/icon3.svg');
+    }
+
+    &__item-title {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__item-description {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}

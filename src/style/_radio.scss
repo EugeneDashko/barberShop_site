@@ -1,0 +1,37 @@
+
+.radio {
+
+    &__input {
+        display: none;
+        position: absolute;
+        appearance: none; //скрыть точки radio
+
+        // фокус будет делаться на input а применятся для label:
+        &:focus + .radio__label,
+        &:checked + .radio__label {
+            color: #241D1C;
+            background-color: #F6F3E3;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        padding: 16px 24px;
+        border-radius: 36px;
+        border: 1px solid #BFBDB2;
+        font-size: 14px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        cursor: pointer;
+
+            &:hover {
+                color: #EFE7BE;
+            }
+
+
+
+        &_professional {
+        }
+    }
+}
