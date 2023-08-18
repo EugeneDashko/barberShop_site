@@ -50,6 +50,15 @@ module.exports = {
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
     // }),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/img'),
+          to: path.resolve(__dirname, 'dist/assets')
+        }
+      ]
+    }),
     
     // new FaviconWebpackPlugin ({
     //   logo: './src/img/icon.svg',
