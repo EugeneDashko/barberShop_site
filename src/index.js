@@ -4,6 +4,7 @@ import { initSlider } from './modules/slider';
 // import './page.html';
 
 //new modules:
-initSlider();
+window.addEventListener('DOMContentLoaded',initSlider)
+// initSlider();
 
 //use modules
