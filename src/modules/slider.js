@@ -4,10 +4,10 @@ const addPreload = (elem) => {
 const removePreload = (elem) => {
     elem.classList.remove('preload')
 }
-// const startSlider = (slider) => {
-//     removePreload(slider);
+const startSlider = () => {
 
-// }
+
+}
 
 export const initSlider = () => {
     const sliderContainer = document.querySelector('.slider__container');
