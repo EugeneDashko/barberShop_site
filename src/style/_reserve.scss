@@ -1,29 +1,62 @@
 .reserve {
+    padding: 62px 0 124px;
 
     &__title {
-
-    }
+        font-size: 40px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        padding-bottom: 24px;
+            }
 
     &__list {
+        padding-left: 24px;
+        margin: 0 0 72px;
     }
 
     &__item {
+        color:  #BFBDB2;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+            &:last-child {
+
+                margin-bottom: 0;
+            }
+
+
     }
 
     &__form {
     }
 
     &__form-container {
+        margin-bottom: 40px;
     }
 
     &__fieldset {
- 
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 72px;
+        gap: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
 
         &_sub {
+            flex-basis: 100%;
+            margin-bottom: 24px;
         }
     }
 
     &__legend {
+        flex-basis: 100%;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-bottom: 24px;
     }
 
     &__btn {
