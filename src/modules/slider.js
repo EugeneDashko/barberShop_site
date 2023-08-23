@@ -1,10 +1,5 @@
-const addPreload = (elem) => {
-    elem.classList.add('preload')
-}
-const removePreload = (elem) => {
-    elem.classList.remove('preload')
-}
-const startSlider = () => {
+
+export const startSlider = () => {
     const sliderList = document.querySelector('.slider__list');
     const sliderItems = document.querySelectorAll('.slider__item');
     const btnPrevSlide = document.querySelector('.slider__arrow_left');
@@ -14,7 +9,9 @@ const startSlider = () => {
     let position = 0;
 
     const checkSlider = () => {
-        if ((activeSlide + 2 === sliderItems.length && document.documentElement.offsetWidth > 560) || 
+        console.log('activeSlide + 2: ',activeSlide + 2);
+        console.log('sliderItems.length: ', sliderItems.length);
+        if ((activeSlide + 2 === sliderItems.length && document.documentElement.offsetWidth > 560) ||
             activeSlide === sliderItems.length) {
             btnNextSlide.style.display = "none";
         } else {
@@ -54,6 +51,9 @@ const startSlider = () => {
     btnPrevSlide.addEventListener('click',prevSlide );
     btnNextSlide.addEventListener('click',nextSlide );
 
+
+
+
 //чтобы слайдер не ломался при resize:
     window.addEventListener('resize', () => {
         if(activeSlide + 2 > sliderItems.length && document.documentElement.offsetWidth > 560) {
@@ -62,23 +62,7 @@ const startSlider = () => {
         }
 
         position = -sliderItems[0].clientWidth * (activeSlide-1);
-        console.log('position: ', position);
         sliderList.style.transform = `translateX(${position}px)`;
         checkSlider();
-    } )
-}
-
-
-export const initSlider = () => {
-    const sliderContainer = document.querySelector('.slider__container');
-    const slider = document.querySelector('.slider');
-
-    addPreload(slider);
-    sliderContainer.style.display = 'none';
-
-    window.addEventListener('load', () => {
-        removePreload(slider);
-        sliderContainer.style.display = '';
     })
-    startSlider();
 }
