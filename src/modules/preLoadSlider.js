@@ -7,9 +7,8 @@ export const preLoadSlider = () => {
         elem.classList.remove('preload')
     }
 
-
-    const sliderContainer = document.querySelector('.slider__container');
     const slider = document.querySelector('.slider');
+    const sliderContainer = document.querySelector('.slider__container');
 
     addPreload(slider);
     sliderContainer.style.display = 'none';
@@ -18,5 +17,4 @@ export const preLoadSlider = () => {
         removePreload(slider);
         sliderContainer.style.display = '';
     })
-
 }

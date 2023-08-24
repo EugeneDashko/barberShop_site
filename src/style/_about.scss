@@ -1,11 +1,28 @@
 .about {
     padding: 62px 0;
 
+        @include md {
+            padding: 40px 0;
+            @include sm {
+                padding: 32px 0;
+            }
+        }
+
     &__title {
         font-size: 40px;
         line-height: 1.2;
         text-transform: uppercase;
         margin-bottom: 24px;
+            @include md {
+                font-size: 32px;
+                @include sm {
+                    font-size:20px;
+                    margin-bottom: 16px;
+                    @include sm {
+                        font-size: 12px;
+                    }
+                }
+            }
     }
 
     &__description {
@@ -14,22 +31,58 @@
         line-height: 1.5;
         max-width: 700px;
         margin-bottom: 72px;
+
+            @include lg {
+                margin-bottom: 46px;
+                @include md {
+                    margin-bottom: 38px;
+
+                }
+            }
     }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, 384px);
         gap: 24px 32px;
+
+            @include lg {
+                grid-template-columns: repeat(auto-fit, 290px);
+                column-gap: 29px;
+
+                @include md {
+                    grid-template-columns: repeat(auto-fit, 320px);
+
+                    @include sm {
+                        grid-template-columns: minmax(272px, 1fr);
+                    }
+                }
+                
+            }
+
     }
 
     &__item {
-        padding: 6px 6px 6px 96px;
+        padding: 6px 0 6px 96px;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 80px;
+            @include lg {
+                padding: 100px 6px 6px 0px;
+                @include md {
+                    min-height: 96px;
+                    padding: 0 6px 6px 100px;
+                    @include sm {
+                        padding-left: 72px;
+                        background-size: 64px;
+                    }
+                }
+            }
+
     }
 
     &__item_icon1 {
         background-image: url('/src/img/icon1.svg');
+
     }
     &__item_icon2 {
         background-image: url('/src/img/icon2.svg');
@@ -44,6 +97,10 @@
         font-weight: 400;
         text-transform: uppercase;
         margin-bottom: 8px;
+
+            @include md {
+                font-size: 16px;
+            }
     }
 
     &__item-description {

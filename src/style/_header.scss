@@ -1,5 +1,7 @@
 .header {
 
+
+
     &__container {
         // position: relative;
         display: flex;
@@ -19,6 +21,11 @@
             //     height: 1px;
             //     background-color: #BFBDB2;
             // }
+
+            @include sm {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
     }
 
     &__navigation {

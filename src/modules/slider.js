@@ -9,10 +9,10 @@ export const startSlider = () => {
     let position = 0;
 
     const checkSlider = () => {
-        console.log('activeSlide + 2: ',activeSlide + 2);
-        console.log('sliderItems.length: ', sliderItems.length);
+
         if ((activeSlide + 2 === sliderItems.length && document.documentElement.offsetWidth > 560) ||
             activeSlide === sliderItems.length) {
+
             btnNextSlide.style.display = "none";
         } else {
             btnNextSlide.style.display = "";
@@ -29,7 +29,9 @@ export const startSlider = () => {
 
     const nextSlide = () => {
         sliderItems[activeSlide]?.classList.remove('slider__item_active');
+
         position = -sliderItems[0].clientWidth * activeSlide;
+
         sliderList.style.transform = `translateX(${position}px)`;
 
         sliderItems[activeSlide+=1]?.classList.add('slider__item_active');
@@ -40,6 +42,7 @@ export const startSlider = () => {
 
     const prevSlide = () => {
         sliderItems[activeSlide]?.classList.remove('slider__item_active');
+
         position = -sliderItems[0].clientWidth * (activeSlide-2);
         sliderList.style.transform = `translateX(${position}px)`;
 
