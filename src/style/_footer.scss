@@ -1,0 +1,49 @@
+.footer {
+
+    &__container {
+        padding-top: 17px;
+        padding-bottom: 24px;
+        border-top: 1px solid #BFBDB2;
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__logo {
+    }
+
+    &__navigation {
+        justify-self: center;
+    }
+
+    &__developers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        font-size: 12px;
+        line-height: 100%;
+
+    }
+
+    &__developer {
+    }
+
+    &__copyright {
+    }
+}
+.container {
+}
+.navigation {
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
+
