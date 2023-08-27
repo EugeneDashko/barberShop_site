@@ -1,5 +1,3 @@
-import { removePreload } from "./preload";
-
 
 export const renderPrice = (wrapper, data) => {
     data.forEach(item => {

@@ -1,4 +1,6 @@
-export const renderService = (data) => {
+export const renderService = (wrapper, data) => {
+    console.log('data: ', data);
+
     const labels = data.map(item => {
         const label = document.createElement('label');
         label.classList.add('radio');
@@ -7,9 +9,9 @@ export const renderService = (data) => {
             <span class="radio__label">${item.name}</span>
         `;
         return label;
-    })
+    });
+    wrapper.append(...labels);
 }
-
 
 /*
     <label class="radio">

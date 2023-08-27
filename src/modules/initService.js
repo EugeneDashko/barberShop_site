@@ -5,6 +5,7 @@ import { renderService } from "./renderService";
 
 
 export const initService = () => {
+    
     const priceList = document.querySelector('.price__list');
     priceList.textContent = '';
     addPreload(priceList);
@@ -21,11 +22,10 @@ export const initService = () => {
     .then((data) => {
         renderPrice(priceList, data);
         removePreload(priceList);
+        return data;
     })
     .then ((data) => {
         renderService(reserveFieldsetService, data);
         removePreload(reserveFieldsetService);
-    } )
-
-
+    })
 }
