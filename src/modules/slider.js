@@ -1,5 +1,6 @@
 
 export const startSlider = () => {
+
     const sliderList = document.querySelector('.slider__list');
     const sliderItems = document.querySelectorAll('.slider__item');
     const btnPrevSlide = document.querySelector('.slider__arrow_left');

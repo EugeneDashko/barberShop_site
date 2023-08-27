@@ -1,5 +1,7 @@
 .footer {
 
+
+
     &__container {
         padding-top: 17px;
         padding-bottom: 24px;
@@ -8,6 +10,11 @@
         grid-template-columns: max-content 1fr max-content;
         align-items: center;
         gap: 40px;
+
+        @include sm {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
     }
 
     &__logo {
@@ -15,6 +22,9 @@
 
     &__navigation {
         justify-self: center;
+        @include sm {
+            justify-self: flex-start;
+        }
     }
 
     &__developers {
@@ -25,12 +35,26 @@
         font-size: 12px;
         line-height: 100%;
 
+        @include sm {
+            font-size: 10px;
+        }
+
     }
 
     &__developer {
+        &_link {
+            &:hover {
+                text-decoration: underline;
+                color: #BFBDB2;
+            }
+
+        }
     }
 
     &__copyright {
+        @include sm {
+            font-size: 10px;
+        }
     }
 }
 .container {
@@ -38,12 +62,21 @@
 .navigation {
 
     &__list {
+        @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
     }
 
     &__item {
     }
 
     &__link {
+        @include sm {
+            font-size: 12px;
+        }
+
     }
 }
 
