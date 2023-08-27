@@ -1,4 +1,6 @@
 import { addPreload, removePreload } from "./preload";
+
+
 export const preLoadSlider = () => {
 
     const slider = document.querySelector('.slider');

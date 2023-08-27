@@ -5,7 +5,7 @@ import { preLoadSlider } from './modules/preLoadSlider';
 import { startSlider } from './modules/slider';
 // import './page.html';
 
-const API_URL = 'https://shocking-blush-lift.glitch.me/';
+export const API_URL = 'https://prickly-literate-output.glitch.me/api';
 
 /*
 Доступные методы:
@@ -21,12 +21,11 @@ POST /api/order - оформить заказ
 
 
 const init = () => {
-
     preLoadSlider();
     startSlider();
     initService();
-
 }
+
 window.addEventListener('DOMContentLoaded',init);
 
 
