@@ -19,7 +19,7 @@ const removeDisabled = (arr) => {
 
 export const initReserve = () => {
     const reserveForm = document.querySelector('.reserve__form');
-    console.log('reserveForm: ', reserveForm);
+    // console.log('reserveForm: ', reserveForm);
     //получаю все радиогнокпи с радио 'name': professional
     // console.log('reserveForm: ', reserveForm.professional);
 
@@ -27,7 +27,7 @@ export const initReserve = () => {
     // const создает переменные с такими именами( к которым потом мы ниже обращаемся):
     const {fieldprof, fielddata, fieldmonth, fieldday, fieldtime, btn} = reserveForm;
 
-    // change смотри на изменения внутри формы
+    // change смотрю на изменения внутри формы:
     reserveForm.addEventListener('change', async (event) => {
         const target  = event.target;
 
@@ -36,8 +36,10 @@ export const initReserve = () => {
             addPreload(fieldprof);
 
             // способ отличный от fetch: async/ await
-            const response = await fetch(`${API_URL}/api?service=${target.value}`)
+            // получаю с сервера барберов по value .reserve__form :
+            const response = await fetch(`${API_URL}/api?service=${target.value}`);
             const data = await response.json();
+            console.log('data: список барберов: ', data);
 
             renderProf(fieldprof, data);
             removePreload(fieldprof);

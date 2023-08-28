@@ -2,6 +2,8 @@ import { API_URL } from "..";
 
 export const renderProf = (wrapper, data) => {
 
+    console.log('dataRenderProf: ', data);
+
     const labels = data.map(item => {
         const label = document.createElement('label');
         label.classList.add('radio');

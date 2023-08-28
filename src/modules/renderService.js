@@ -1,4 +1,5 @@
 export const renderService = (wrapper, data) => {
+    console.log('dataRenderService: ', data);
 
     const labels = data.map(item => {
         const label = document.createElement('label');
