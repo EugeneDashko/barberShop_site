@@ -1,5 +1,4 @@
 export const renderService = (wrapper, data) => {
-    console.log('data: ', data);
 
     const labels = data.map(item => {
         const label = document.createElement('label');
@@ -11,7 +10,7 @@ export const renderService = (wrapper, data) => {
         return label;
     });
     wrapper.append(...labels);
-}
+};
 
 /*
     <label class="radio">

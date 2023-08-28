@@ -5,7 +5,7 @@ import { renderService } from "./renderService";
 
 
 export const initService = () => {
-    
+
     const priceList = document.querySelector('.price__list');
     priceList.textContent = '';
     addPreload(priceList);
@@ -15,10 +15,10 @@ export const initService = () => {
     addPreload(reserveFieldsetService);
 
 
-    fetch (API_URL)
+    fetch (`${API_URL}/api`)
     .then((response) => {
         return response.json();
-})
+    })
     .then((data) => {
         renderPrice(priceList, data);
         removePreload(priceList);

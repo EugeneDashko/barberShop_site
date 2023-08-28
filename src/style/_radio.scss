@@ -12,6 +12,10 @@
             color: #241D1C;
             background-color: #F6F3E3;
         }
+
+        &:disabled + .radio__label {
+            opacity: 0.3;
+        }
     }
 
     &__label {
@@ -25,7 +29,7 @@
         // margin-bottom: 8px;
         cursor: pointer;
 
-            &:hover {
+            &:hover:not(disabled){
                 color: #EFE7BE;
             }
             @include md {

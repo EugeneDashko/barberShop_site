@@ -1,11 +1,12 @@
 import './index.html';
 import './index.scss';
+import { initReserve } from './modules/initReserve';
 import { initService } from './modules/initService';
 import { preLoadSlider } from './modules/preLoadSlider';
 import { startSlider } from './modules/slider';
 // import './page.html';
 
-export const API_URL = 'https://prickly-literate-output.glitch.me/api';
+export const API_URL = 'https://prickly-literate-output.glitch.me/';
 
 /*
 Доступные методы:
@@ -19,14 +20,13 @@ POST /api/order - оформить заказ
 
 //new modules:
 
-
 const init = () => {
     preLoadSlider();
     startSlider();
     initService();
+    initReserve();
 }
 
 window.addEventListener('DOMContentLoaded',init);
-
 
 //use modules

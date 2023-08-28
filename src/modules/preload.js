@@ -3,5 +3,5 @@ export const addPreload = (elem) => {
 };
 
 export const removePreload = (elem) => {
-    elem.classList.remove('preload')
+    elem.classList.remove('preload');
 };
