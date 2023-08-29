@@ -22,13 +22,12 @@ const removeDisabled = (arr) => {
 
 export const initReserve = () => {
     const reserveForm = document.querySelector('.reserve__form');
-    // console.log('reserveForm: ', reserveForm);
+
     //получаю все радиогнокпи с радио 'name': professional
-    // console.log('reserveForm: ', reserveForm.professional);
 
     //деструктуризация: вытаскиваю из reserveForm эти элементы
     // const создает переменные с такими именами( к которым потом мы ниже обращаемся):
-    const {fieldprof, fielddata, fieldmonth, fieldday, fieldtime, btn} = reserveForm;
+    const {fieldservice, fieldprof, fielddata, fieldmonth, fieldday, fieldtime, btn} = reserveForm;
         // addDisabled ([
     //     reserveForm.fieldprof,
     //     reserveForm.fielddata,
@@ -42,7 +41,6 @@ export const initReserve = () => {
     // change смотрю на изменения внутри формы:
     reserveForm.addEventListener('change', async (event) => {
         const target  = event.target;
-        console.log('target: ', target);
 
         if (target.name === 'service') {
             addDisabled ([fieldprof, fielddata, fieldmonth, fieldday, fieldtime, btn]);
@@ -54,7 +52,6 @@ export const initReserve = () => {
             // получаю с сервера барберов по value .reserve__form :
             const response = await fetch(`${API_URL}/api?service=${target.value}`);
             const data = await response.json();
-            console.log('data: список барберов: ', data);
 
             renderProf(fieldprof, data);
             removePreload(fieldprof);
@@ -110,5 +107,36 @@ export const initReserve = () => {
         if (target.name === 'time') {
             removeDisabled([btn]);
         }
+    });
+
+    //отправка на сервер:
+    reserveForm.addEventListener('submit', async (e) => {
+        //отменяю перезагрузку страницы при нажатии на кнопку:
+        e.preventDefault();
+
+        const formData = new FormData(reserveForm);
+
+        const json = JSON.stringify(Object.fromEntries(formData))
+        // console.log('json: ', json);
+
+        const response = await fetch(`${API_URL}/api/order`, {
+            method: 'post',
+            body: json,
+        });
+
+        const data = await response.json();
+
+        addDisabled ([fieldservice, fieldprof, fielddata, fieldmonth, fieldday, fieldtime, btn]);
+
+        const p = document.createElement('p');
+        p.textContent = `
+        Спасибо за бронь, №${data.id}!
+        Ждем вас ${new Intl.DateTimeFormat('ru-RU', {
+            month: 'long',
+            day: 'numeric',
+        }).format(new Date(`${data.month}/${data.day}`))},
+        время ${data.time}
+        `;
+        reserveForm.append(p);
     });
 };
