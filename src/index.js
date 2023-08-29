@@ -7,7 +7,7 @@ import { startSlider } from './modules/slider';
 // import './page.html';
 
 export const API_URL = 'https://prickly-literate-output.glitch.me/';
-
+export const year = new Date().getFullYear()
 /*
 Доступные методы:
 GET /api - получить список услуг
@@ -21,6 +21,8 @@ POST /api/order - оформить заказ
 //new modules:
 
 const init = () => {
+
+
     preLoadSlider();
     startSlider();
     initService();
