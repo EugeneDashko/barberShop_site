@@ -60,10 +60,10 @@ module.exports = {
       ]
     }),
     
-    // new FaviconWebpackPlugin ({
-    //   logo: './src/img/icon.svg',
-    //   inject: true,
-    // })
+    new FaviconWebpackPlugin ({
+      logo: './src/img/icon.svg',
+      inject: true,
+    })
   ],
   module: {
     rules: [
